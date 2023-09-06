@@ -1,0 +1,47 @@
+.getWeatherBtn {
+  background-color: #147921;
+  border: hover;
+  color: rgb(0, 0, 0);
+  padding: 9px 9px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.locationInput {
+  background-color: rgb(3, 3, 3);
+  border-style: double;
+  padding: 9px 9px;
+  color: azure;
+}
+
+.weatherDash {
+  background-color: #3498db;
+  color: rgb(19, 5, 5);
+  padding: 30px;
+  text-align: right;
+  font-size: 50px;
+  border-style: double;
+}
+.backColor {
+  background-color: cadetblue;
+}
+.cityBtn {
+  background-color: #73c72e;
+  border: hover;
+  color: rgb(0, 0, 0);
+  margin: 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.cityBtnCon {
+  display: flex;
+  flex-direction: column;
+  width: 125px;
+}

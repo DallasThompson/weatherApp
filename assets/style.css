@@ -48,9 +48,26 @@
 
 .weatherDayDiv {
   width: 200px;
-  height: 45px;
+  height: 150px;
   background-color: deepskyblue;
   color: white;
   padding: 3px;
   margin: 5px;
+}
+
+.citySearchBtn {
+  background-color: #d90707;
+  border-style: double;
+  color: rgb(0, 0, 0);
+  margin: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.currentDay {
+  border-style: dotted;
+  background-color: aqua;
+  margin-left: 100px;
+  margin-right: 100rem;
 }

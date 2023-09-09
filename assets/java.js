@@ -13,25 +13,30 @@ $(function () {
   $("#searchBtn").on("click", async function () {
     await getLatLon();
     await getCurrentWeather();
-    await getWeather();
+    await getFiveDayForcast();
   });
 
   async function getCurrentWeather() {
-    var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=cc6f6bc9f9f94c4868709006cb781c83`;
+    var currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=cc6f6bc9f9f94c4868709006cb781c83`;
 
     await fetch(currentWeatherUrl)
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        $("#currentTemp").text(data.main.temp);
-        $("#currentWind").text(data.main.speed);
-        $("#currentHumid").text(data.main.humidity);
-        $("#currentMain").text(data.weather[0].main);
-        currentTemp = data.main.temp;
-        currentWind = data.wind.speed;
-        currentHumid = data.main.humidity;
-        currentMain = data.weather[0].main;
+        console.log(data);
+        $("#currentTemp").text(
+          "Current Temperature: " + data.main.temp + "Fahrenheit "
+        );
+        $("#currentWind").text(
+          "Current Windspeeds: " + data.wind.speed + "Mph"
+        );
+        $("#currentHumid").text("Current Humidity: " + data.main.humidity);
+        $("#currentMain").text("Current Conditions: " + data.weather[0].main);
+        $("#currentIcon").attr(
+          "src",
+          "assets/images/" + data.weather[0].icon + ".png"
+        );
       });
   }
 
@@ -45,6 +50,7 @@ $(function () {
 
     await fetch(latLonUrl)
       .then(function (response) {
+        console.log(response);
         return response.json();
       })
       .then(function (data) {
@@ -55,12 +61,7 @@ $(function () {
   }
 
   async function getFiveDayForcast() {
-    var weatherUrl =
-      "https://api.openweathermap.org/data/2.5/forecast?lat=" +
-      lat +
-      "&lon=" +
-      lon +
-      "&appid=cc6f6bc9f9f94c4868709006cb781c83";
+    var weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=cc6f6bc9f9f94c4868709006cb781c83`;
 
     await fetch(weatherUrl)
       .then(function (response) {
@@ -68,9 +69,36 @@ $(function () {
       })
       .then(function (data) {
         console.log(data);
+        $("#temp0").text(
+          "Temperature: " + data.list[0].main.temp + " Fahrenheit "
+        );
+        $("#wind0").text("Windspeed: " + data.list[0].wind.speed + " Mph");
+        $("#humid0").text("Humidity: " + data.list[0].main.humidity);
+        $("#main0").text("Conditions: " + data.list[0].weather[0].main);
+        $("#temp1").text(
+          "Temperature: " + data.list[6].main.temp + " Fahrenheit "
+        );
+        $("#wind1").text("Windspeed: " + data.list[6].wind.speed + " Mph");
+        $("#humid1").text("Humidity: " + data.list[6].main.humidity);
+        $("#main1").text("Conditions: " + data.list[6].weather[0].main);
+        $("#temp2").text(
+          "Temperature: " + data.list[0].main.temp + " Fahrenheit "
+        );
+        $("#wind2").text("Windspeed: " + data.list[14].wind.speed + " Mph");
+        $("#humid2").text("Humidity: " + data.list[14].main.humidity);
+        $("#main2").text("Conditions: " + data.list[14].weather[0].main);
+        $("#temp3").text(
+          "Temperature: " + data.list[22].main.temp + " Fahrenheit "
+        );
+        $("#wind3").text("Windspeed: " + data.list[22].wind.speed + " Mph");
+        $("#humid3").text("Humidity: " + data.list[22].main.humidity);
+        $("#main3").text("Conditions: " + data.list[22].weather[0].main);
+        $("#temp4").text(
+          "Temperature: " + data.list[30].main.temp + " Fahrenheit "
+        );
+        $("#wind4").text("Windspeed: " + data.list[30].wind.speed + " Mph");
+        $("#humid4").text("Humidity: " + data.list[30].main.humidity);
+        $("#main4").text("Conditions: " + data.list[30].weather[0].main);
       });
   }
 });
-// var $div = $("<div>");
-// $div.click(function(){ /* ... */ });
-// $("#box").append($div);

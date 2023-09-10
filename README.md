@@ -3,7 +3,7 @@
 ##Below is a link to my weatherApp, GITHUB REPO, and a screenshot of my weatherApp
 
 #Live Link
-dallasthompson.github.io/weatherApp/
+https://dallasthompson.github.io/weatherApp/
 
 #GITHUB REPO
 https://github.com/DallasThompson/weatherApp/

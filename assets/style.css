@@ -19,15 +19,15 @@
 }
 
 .weatherDash {
-  background-color: #3498db;
+  background-color: deepskyblue;
   color: rgb(19, 5, 5);
   padding: 30px;
   text-align: right;
   font-size: 50px;
   border-style: double;
 }
-.backColor {
-  background-color: cadetblue;
+.background {
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
 }
 .cityBtn {
   background-color: #73c72e;
@@ -48,7 +48,8 @@
 
 .weatherDayDiv {
   width: 200px;
-  height: 150px;
+  height: 300px;
+  border-style: outset;
   background-color: deepskyblue;
   color: white;
   padding: 3px;
@@ -67,7 +68,7 @@
 }
 .currentDay {
   flex-direction: column;
-  border-style: dotted;
+  border-style: outset;
   background-color: aqua;
   margin-left: 100px;
   margin-right: 100rem;

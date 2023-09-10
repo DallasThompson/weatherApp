@@ -97,6 +97,7 @@ $(function () {
           "src",
           "assets/images/" + data.list[0].weather[0].icon + ".png"
         );
+
         $("#temp1").text(
           "Temperature: " + data.list[6].main.temp + " Fahrenheit "
         );
@@ -104,6 +105,11 @@ $(function () {
         $("#humid1").text("Humidity: " + data.list[6].main.humidity);
         $("#main1").text("Conditions: " + data.list[6].weather[0].main);
         $("#date2").text("Date: " + convertDate(data.list[6].dt));
+        $("#dayTwoIcon").attr(
+          "src",
+          "assets/images/" + data.list[6].weather[0].icon + ".png"
+        );
+
         $("#temp2").text(
           "Temperature: " + data.list[0].main.temp + " Fahrenheit "
         );
@@ -111,6 +117,11 @@ $(function () {
         $("#humid2").text("Humidity: " + data.list[14].main.humidity);
         $("#main2").text("Conditions: " + data.list[14].weather[0].main);
         $("#date3").text("Date: " + convertDate(data.list[14].dt));
+        $("#dayThreeIcon").attr(
+          "src",
+          "assets/images/" + data.list[14].weather[0].icon + ".png"
+        );
+
         $("#temp3").text(
           "Temperature: " + data.list[22].main.temp + " Fahrenheit "
         );
@@ -118,6 +129,11 @@ $(function () {
         $("#humid3").text("Humidity: " + data.list[22].main.humidity);
         $("#main3").text("Conditions: " + data.list[22].weather[0].main);
         $("#date4").text("Date: " + convertDate(data.list[22].dt));
+        $("#dayFourIcon").attr(
+          "src",
+          "assets/images/" + data.list[22].weather[0].icon + ".png"
+        );
+
         $("#temp4").text(
           "Temperature: " + data.list[30].main.temp + " Fahrenheit "
         );
@@ -125,6 +141,10 @@ $(function () {
         $("#humid4").text("Humidity: " + data.list[30].main.humidity);
         $("#main4").text("Conditions: " + data.list[30].weather[0].main);
         $("#date5").text("Date: " + convertDate(data.list[30].dt));
+        $("#dayFiveIcon").attr(
+          "src",
+          "assets/images/" + data.list[30].weather[0].icon + ".png"
+        );
       });
   }
 });

@@ -66,8 +66,17 @@
   font-size: 20px;
 }
 .currentDay {
+  flex-direction: column;
   border-style: dotted;
   background-color: aqua;
   margin-left: 100px;
   margin-right: 100rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: flex;
 }
